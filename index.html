@@ -1,0 +1,33 @@
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Meu B2B </title>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="_css/style.css">
+        <script type="text/javascript" src="_js/validate.js"></script>
+    </head>
+    
+    <body>
+    
+        <header>
+            <img src="_images/logo.png" class="logoimg">
+        </header>
+    
+        <main>
+            <h1>Entrar</h1>
+            <form name = "formlogin" action="_pages/main.html" method="POST">
+                <p>Usuário</p>
+                <input type="text" name="usuario" placeholder="Insira seu nome de usuário">
+                <p>Senha</p>
+                <input type="password" name="senha" placeholder="Insira sua senha">
+                <input type="submit" name="" value="Login" onclick="return validar()">
+                <a href="#">Esqueceu sua senha?</a><br>
+                <a href="#">Ainda não possui uma conta?</a>
+            </form>
+        </main>
+    
+    </body>
+
+</html>

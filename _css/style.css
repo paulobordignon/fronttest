@@ -1,0 +1,87 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content : center;
+    align-items: center;
+}
+
+header{
+    flex: 1 1 auto;
+}
+
+main{
+    width: 320px;
+    height: 350px;
+    border: 2px solid rgba(0,0,5,0.8);
+    border-radius: 80px 0px 80px 0px;
+    color:rgba(0,0,5,0.8);
+    position: absolute;
+    box-sizing: border-box;
+    padding: 28px 28px;
+    flex: 1 1 auto;
+}
+
+h1{
+    margin: 0;
+    padding-top: 0;
+    padding-left: 0;
+    padding-bottom: 20px;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 20px;
+}
+
+main p {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+main input{
+    width: 100%;
+    margin-bottom: 21px;
+}
+
+main input[type="text"], input[type="password"]{
+    border: none;
+    border-bottom: 1px solid rgba(0,0,5,0.8);
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: rgba(0,0,5,0.8);
+    font-size: 16px;
+}
+
+main input[type="submit"]{
+    border:none;
+    outline: none;
+    height: 35px;
+    color: #fff ;
+    background: rgba(0,0,5,0.8);
+    border-radius: 20px;
+    transition: 0.2s;
+}
+
+main input[type="submit"]:hover {
+    cursor: pointer;
+    background: #062949;
+    transition: 0.2s;
+}
+
+main a{
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba(0,0,5,0.8);
+    transition: 0.2s;
+}
+
+main a:hover {
+    transition: 0.2s;
+    color: #062949;
+}
