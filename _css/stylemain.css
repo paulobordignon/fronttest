@@ -52,7 +52,7 @@ a:hover{
     color: white;
 }
 
-form{
+main{
     padding: 20px;
 }
 
@@ -82,6 +82,20 @@ input[type="submit"]:hover {
     cursor: pointer;
     background: #062949;
     transition: 0.2s;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 5px;
+}
+
+main a:hover{
+    color: #062949;
 }
 
 @media screen and (max-width: 768px){

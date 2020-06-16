@@ -20,7 +20,7 @@ const urlvendedores = 'http://my-proposta.azurewebsites.net/v1/vendedores';
 const urlplanos = 'http://my-proposta.azurewebsites.net/v1/planos';
 */
 
-const dadoscliente = {
+const dadosCliente = {
     nome: "nomefantasia",
     cnpj: "1213",
     razaoSocial: "teste",
@@ -33,7 +33,7 @@ fetch("https://my-proposta.azurewebsites.net/v1/clientes", {
     headers: {
         "Content-Type": "application/json"
     },
-    body: JSON.stringify(dadoscliente)
+    body: JSON.stringify(dadosCliente)
 });
 
 /*
@@ -47,3 +47,31 @@ const cadastrarcliente = {
 
 fetch('/api',cadastrarcliente);
 */
+
+function popularTabela(){
+    var tabela = document.getElementById("tabela").getElementsByTagName('tbody')[0];
+    var novaLinha = tabela.insertRow(tabela.length);
+    cell0 = novaLinha.insertCell(0);
+    cell0.innerHTML = "123";
+    cell1 = novaLinha.insertCell(1);
+    cell1.innerHTML = "nome fa";
+    cell2 = novaLinha.insertCell(2);
+    cell2.innerHTML = "razao";
+    cell3 = novaLinha.insertCell(3);
+    cell3.innerHTML = "cnpj";
+    cell4 = novaLinha.insertCell(4);
+    cell4.innerHTML = "ttelefone";
+    cell5 = novaLinha.insertCell(5);
+    cell5.innerHTML = "email";
+    cell6 = novaLinha.insertCell(6);
+    cell6.innerHTML = `<a onClick="editar(this)">Editar</a> <a onClick="deletar(this)">Deletar</a>`;
+    return false;
+}
+
+function editar(){
+    alert("editou");
+}
+
+function deletar(){
+    alert("deletou");
+}
