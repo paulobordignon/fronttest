@@ -7,8 +7,6 @@
         <link href="../_images/favicon.png" rel="icon">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="../_css/stylemain.css">
-        <script type="text/javascript" src="../_js/main.js"></script>
-        <script type="text/javascript" src="../_js/api.js"></script>
     </head>
 
     <body>
@@ -21,12 +19,12 @@
                 <nav>
                     <ul>
                       <li>
-                        <a href="main.html">
+                        <a href="clientesListagem.html">
                           <span>Clientes</span>
                         </a>
                       </li>
                       <li>
-                        <a href="mainvendedores.html">
+                        <a href="#">
                           <span>Vendedores</span>
                         </a>
                       </li>
@@ -40,27 +38,24 @@
             </aside>
 
             <main id="conteudo" class="exibeconteudo">
-
-              <form>
-                <input type="submit" value="teste" onclick="return popularTabela()">
-                <table id="tabela">
-                  <thead>
-                    <tr>
-                      <th>Código</th>
-                      <th>Nome Fantasia</th>
-                      <th>Razão Social</th>
-                      <th>CNPJ</th>
-                      <th>Telefone</th>
-                      <th>E-mail</th>
-                      <th>ds</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                  </tbody>
-                </table>
+              <form name="formmain" id="form">
+                <p>Nome Fantasia</p>
+                <input type="text" name="nomefantasia" placeholder="Insira o nome fantasia">
+                <p>Razão Social</p>
+                <input type="text" name="razaosocial" placeholder="Insira a razão social">
+                <p>CNPJ</p>
+                <input type="number" name="cnpj" placeholder="Insira o CNPJ">
+                <p>Telefone</p>
+                <input type="number" name="telefone" placeholder="Insira o telefone">
+                <p>E-mail</p>
+                <input type="text" name="email" placeholder="Insira o e-mail"><br><br><br>
+                <input type="submit" value="Cadastrar">
               </form>
-            
+
             </main>
+        
+            <script type="text/javascript" src="../_js/main.js"></script>
+            <script type="text/javascript" src="../_js/clientesCadastro.js"></script>
     
     </body>
 
