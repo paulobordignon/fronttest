@@ -93,6 +93,25 @@ td, th {
     border: 1px solid #dddddd;
     text-align: left;
     padding: 5px;
+    border-color: #062949;
+    cursor: pointer;
+}
+
+td{
+    background: white;
+}
+
+th{
+    background: rgba(0,0,5,0.8);
+    color: white;
+}
+
+tr:nth-child(odd) td{
+    background-color: #eee;
+}
+
+tr:hover td{
+    background-color: #feffb7;
 }
 
 main a:hover{

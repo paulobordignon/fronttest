@@ -1,21 +1,20 @@
 const urlclientes = 'https://my-proposta.azurewebsites.net/v1/clientes';
 var gridClientes = document.getElementById('gridClientes');
 
-fetch(urlclientes
-    ).then(response => {
+    fetch(urlclientes).then(response => {
         return response.json();
     }).then(jsonBody => {
         console.log(jsonBody);
         const html = jsonBody.map(user =>{
             return `
                 <tr>
-                <td>${user.id}</td>
+                <td id="teste" name="teste">${user.id}</td>
                 <td>${user.nome}</td>
                 <td>${user.razaoSocial}</td>
                 <td>${user.cnpj}</td>
                 <td>${user.telefone}</td>
                 <td>${user.email}</td>
-                <td><a onClick="editar(this)">Editar</a> <a onClick="excluir(this)">Excluir</a></td>
+                <td><a onClick="clickListener(this)">Editar</a> <a onClick="excluir(this)">Excluir</a></td>
                 </tr>
             `
     }).join("");
@@ -26,8 +25,19 @@ function adicionar(){
     location.href="clientesCadastro.html"
 }
 
+var linhas = document.getElementById("tabela").getElementsByTagName("tr");
+
+function clickListener(e){
+    var campo = document.getElementById('teste');
+    var th = campo.value;
+    var idSelecionado = e.getAttribute(th);
+    console.log(idSelecionado);
+}
+
 function editar(){
-    alert("editou");
+    
+    alert (linhas);
+    
 }
 
 function excluir(){
