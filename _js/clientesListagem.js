@@ -8,13 +8,13 @@ var gridClientes = document.getElementById('gridClientes');
         const html = jsonBody.map(user =>{
             return `
                 <tr>
-                <td id="teste" name="teste">${user.id}</td>
+                <td>${user.id}</td>
                 <td>${user.nome}</td>
                 <td>${user.razaoSocial}</td>
                 <td>${user.cnpj}</td>
                 <td>${user.telefone}</td>
                 <td>${user.email}</td>
-                <td><a onClick="clickListener(this)">Editar</a> <a onClick="excluir(this)">Excluir</a></td>
+                <td><a onClick="atualizarLinhaSelecionada(this)">Editar</a> <a onClick="excluir(this)">Excluir</a></td>
                 </tr>
             `
     }).join("");
@@ -26,24 +26,37 @@ function adicionar(){
 }
 
 var linhas = document.getElementById("tabela").getElementsByTagName("tr");
+var linhaSelecionada = "";
 
-function clickListener(e){
-    var campo = document.getElementById('teste');
-    var th = campo.value;
-    var idSelecionado = e.getAttribute(th);
-    console.log(idSelecionado);
-}
+function atualizarLinhaSelecionada(){
+    
+    for(var i = 0; i < linhas.length; i++){
+        var linha = linhas[i];
+        linha.addEventListener("click", function(){
+            this.classList.toggle("selecionado");
+        });
+    }
 
-function editar(){
-    
-    alert (linhas);
-    
+    var selecionados = document.getElementById("tabela").getElementsByClassName("selecionado");
+
+    for(var i = 0; i < selecionados.length; i++){
+        var selecionado = selecionados[i];
+        selecionado = selecionado.getElementsByTagName("td");
+        linhaSelecionada = selecionado[0].innerHTML ;
+    }
+
 }
 
 function excluir(){
 
-    const dadosCliente = {
-        id: 4
+    atualizarLinhaSelecionada();
+
+    console.log(linhaSelecionada);
+
+    var numberLinhaSelecionada = Number(linhaSelecionada);
+
+    const dadosExclusao = {
+        id: numberLinhaSelecionada
     }
 
     fetch(urlclientes, {
@@ -51,11 +64,11 @@ function excluir(){
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify(dadosCliente)
+        body: JSON.stringify(dadosExclusao)
     }).then(response=> {
         return response.json();
     }).then(json => {
         console.log(json);
     });
-    
+
 }
