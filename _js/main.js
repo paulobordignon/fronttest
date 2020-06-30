@@ -27,13 +27,13 @@ function validar(){
     }
 
     if (nomefantasia.length < 4){
-        alert("O Nome Fantasia deve conter no mínimo 3 caracteres");
+        alert("O Nome Fantasia deve conter no mínimo 4 caracteres");
         document.formmain.nomefantasia.focus();
         return false;
     }
 
     if (razaosocial.length < 4){
-        alert("A Razão Social deve conter no mínimo 3 caracteres");
+        alert("A Razão Social deve conter no mínimo 4 caracteres");
         document.formmain.razaosocial.focus();
         return false;
     }
@@ -51,7 +51,7 @@ function validar(){
     }
 
     if (email.length < 4){
-        alert("O E-mail deve conter no mínimo 3 caracteres");
+        alert("O E-mail deve conter no mínimo 4 caracteres");
         document.formmain.email.focus();
         return false;
     }

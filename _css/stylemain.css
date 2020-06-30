@@ -114,6 +114,10 @@ tr:hover td{
     background-color: #feffb7;
 }
 
+tr.selecionado td{
+    background-color: #aff7ff;
+}
+
 main a:hover{
     color: #062949;
 }
