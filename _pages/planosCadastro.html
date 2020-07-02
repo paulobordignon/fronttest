@@ -38,31 +38,22 @@
             </aside>
 
             <main id="conteudo" class="exibeconteudo">
-
-                <table id="tabela">
-                  <thead>
-                    <tr>
-                      <th>Código</th>
-                      <th>Nome Fantasia</th>
-                      <th>Razão Social</th>
-                      <th>CNPJ</th>
-                      <th>Telefone</th>
-                      <th>E-mail</th>
-                    </tr>
-                  </thead>
-                  <tbody id="gridClientes">
-                  </tbody>
-                </table>
-                <br><br>
-                <input type="button" value="Adicionar" onclick="adicionar()">
-                <input type="button" value="Editar" onclick="editar()">
-                <input type="button" value="Excluir" onclick="excluir()">
-
+              <form name="formmain" id="form">
+                <p>Nome</p>
+                <input type="text" name="nome" id="nome" placeholder="Insira o nome do plano">
+                <p>Horas</p>
+                <input type="number" name="horas" id="horas" placeholder="Insira a qtde de horas">
+                <p>Preço</p>
+                <input type="number" name="preco" id="preco" placeholder="Insira o preço">
+                <p>Ativo</p>
+                <input type="checkbox" name="ativo" id="ativo" checked><br><br><br>
+                <input type="submit" value="Gravar" onclick="return validarPlano()">
+              </form>
             </main>
-    
+        
             <script type="text/javascript" src="../_js/main.js"></script>
-            <script type="text/javascript" src="../_js/clientesListagem.js"></script>
-
+            <script type="text/javascript" src="../_js/planosCadastro.js"></script>
+    
     </body>
 
 </html>

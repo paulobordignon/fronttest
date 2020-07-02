@@ -57,3 +57,36 @@ function validar(){
     }
 
 }
+
+function validarPlano(){
+
+    var nome = document.formmain.nome.value;
+    var horas = document.formmain.horas.value;
+    var preco = document.formmain.preco.value;
+
+    if (!nome || !horas || !preco){
+        alert("Favor preencha todos os campos!");
+        document.formmain.nome.focus();
+        return false;
+    }
+
+    if (nome.length < 4){
+        alert("O nome do plano deve conter no mínimo 4 caracteres");
+        document.formmain.nome.focus();
+        return false;
+    }
+    
+    if (horas < 0){
+        alert("A quantidade de horas deve ser superior a zero.");
+        document.formmain.horas.focus();
+        return false;
+    }
+
+    if (preco < 0){
+        alert("O preço deve ser superior a zero.");
+        document.formmain.preco.focus();
+        return false;
+    }
+
+
+}
