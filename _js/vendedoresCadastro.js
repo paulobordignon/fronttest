@@ -33,7 +33,7 @@ if (!idVendedor){
         }).then(({ message }) => {
             alert(message);
             window.location.reload();
-        });
+        }).catch(error => console.error('Ocorreu o seguinte erro:', error));
     });
 
 }else{
@@ -50,11 +50,12 @@ if (!idVendedor){
                     document.querySelector("#nomefantasia").value = dados[i].nome;
                     document.querySelector("#razaosocial").value = dados[i].razaoSocial;
                     document.querySelector("#cnpj").value = dados[i].cnpj;
+                    document.querySelector("#cnpj").disabled = true;
                     document.querySelector("#telefone").value = dados[i].telefone;
                     document.querySelector("#email").value = dados[i].email;
                 }
             }     
-    });
+    }).catch(error => console.error('Ocorreu o seguinte erro:', error));
 
     form.addEventListener('submit', function(e){
         e.preventDefault();
@@ -85,7 +86,7 @@ if (!idVendedor){
         }).then(({ message }) => {
             alert(message);
             window.location.href = ("vendedoresListagem.html");
-        });
+        }).catch(error => console.error('Ocorreu o seguinte erro:', error));
     });
 
 

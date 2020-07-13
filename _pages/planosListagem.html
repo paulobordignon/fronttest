@@ -1,66 +1,64 @@
 <html>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title> Meu B2B </title>
-        <link href="../_images/favicon.png" rel="icon">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="../_css/stylemain.css">
-    </head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Meu B2B </title>
+    <link href="../_images/favicon.png" rel="icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../_css/stylemain.css">
+  </head>
 
-    <body>
+  <body>
 
-            <header>
-                <img src="../_images/logo.png" onclick="menu()">
-            </header>
-    
-            <aside>                
-                <nav>
-                    <ul>
-                      <li>
-                        <a href="clientesListagem.html">
-                          <span>Clientes</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="vendedoresListagem.html">
-                          <span>Vendedores</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="planosListagem.html">
-                          <span>Planos</span>
-                        </a>
-                      </li>
-                    </ul>    
-                </nav>
-            </aside>
+    <header>
+        <img src="../_images/logo.png" onclick="menu()">
+    </header>
 
-            <main id="conteudo" class="exibeconteudo">
+    <aside>                
+      <nav>
+        <ul>
+          <li>
+            <a href="clientesListagem.html">
+              <span>Clientes</span>
+            </a>
+          </li>
+          <li>
+            <a href="vendedoresListagem.html">
+              <span>Vendedores</span>
+            </a>
+          </li>
+          <li>
+            <a href="planosListagem.html">
+              <span>Planos</span>
+            </a>
+          </li>
+        </ul>    
+      </nav>
+    </aside>
 
-                <table id="tabela">
-                  <thead>
-                    <tr>
-                      <th>Código</th>
-                      <th>Nome</th>
-                      <th>Horas</th>
-                      <th>Preço</th>
-                      <th>Ativo</th>
-                      <th>Opções</th>
-                    </tr>
-                  </thead>
-                  <tbody id="gridPlanos">
-                  </tbody>
-                </table>
-                <br><br>
-                <input type="button" value="Adicionar" onclick="adicionar()">
+    <main id="conteudo" class="exibeconteudo">
+      <table id="tabela">
+        <thead>
+          <tr>
+            <th>Código</th>
+            <th>Nome</th>
+            <th>Horas</th>
+            <th>Preço</th>
+            <th>Ativo</th>
+            <th>Opções</th>
+          </tr>
+        </thead>
+        <tbody id="gridPlanos">
+        </tbody>
+      </table>
+      <br><br>
+      <input type="button" value="Adicionar" onclick="adicionar()">
+    </main>
 
-            </main>
-    
-            <script type="text/javascript" src="../_js/main.js"></script>
-            <script type="text/javascript" src="../_js/planosListagem.js"></script>
+    <script type="text/javascript" src="../_js/main.js"></script>
+    <script type="text/javascript" src="../_js/planosListagem.js"></script>
 
-    </body>
+  </body>
 
 </html>

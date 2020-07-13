@@ -13,6 +13,7 @@ header{
 }
 
 main{
+    flex: 1 1 auto;
     width: 320px;
     height: 350px;
     border: 2px solid rgba(0,0,5,0.8);
@@ -21,7 +22,12 @@ main{
     position: absolute;
     box-sizing: border-box;
     padding: 28px 28px;
-    flex: 1 1 auto;
+}
+
+@-moz-document url-prefix(){
+    main{
+        position: relative;
+    }
 }
 
 h1{

@@ -11,17 +11,17 @@ fetch(urlclientes).then(response => {
     const html = jsonBody.map(user =>{
         return `
             <tr>
-                <td>${user.id}</td>
-                <td>${user.nome}</td>
-                <td>${user.razaoSocial}</td>
-                <td>${user.cnpj}</td>
-                <td>${user.telefone}</td>
-                <td>${user.email}</td>
+                <td><span>ID:</span>${user.id}</td>
+                <td><span>Nome:</span>${user.nome}</td>
+                <td><span>Razão:</span>${user.razaoSocial}</td>
+                <td><span>CNPJ:</span>${user.cnpj}</td>
+                <td><span>Fone:</span>${user.telefone}</td>
+                <td><span>Email:</span> ${user.email}</td>
             </tr>
         `
     }).join("");
     gridClientes.insertAdjacentHTML("afterbegin", html);
-});
+}).catch(error => console.error('Ocorreu o seguinte erro:', error));
 
 function adicionar(){
     location.href="clientesCadastro.html"
@@ -96,7 +96,7 @@ function excluir(){
             }).then(({ message }) => {
                 alert(message);
                 window.location.reload();
-            });
+            }).catch(error => console.error('Ocorreu o seguinte erro:', error));
         }else{
             window.location.reload();
         }

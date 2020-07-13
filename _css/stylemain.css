@@ -122,6 +122,10 @@ main a:hover{
     color: #062949;
 }
 
+#tabela td span{
+    display: none;
+}
+
 @media screen and (max-width: 768px){
     body{
         grid-template-columns: 1fr;
@@ -133,4 +137,37 @@ main a:hover{
     .exibemenu{
         grid-area: main;
     }
+
+    #tabela thead {
+        display: none
+    }
+
+    #tabela tr{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 25px;
+    }
+
+    #tabela td{
+        width: 44%;
+        position: relative;
+        padding-top: 15px;
+    }
+
+    #tabela td span{
+        display: block;
+        top: 0;
+        left: 0;
+        width: 50%;
+        font-size: 60%;
+        position: absolute;
+        color: white;
+        background-color: rgba(0,0,5,0.8);
+    }
+
+    input[type="submit"], [type="button"]{
+        margin-bottom: 10px;
+        width: 85px;
+    }
+
 }

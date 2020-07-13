@@ -37,7 +37,7 @@ if (!idPlano){
         }).then(({ message }) => {
             alert(message);
             window.location.reload();
-        });
+        }).catch(error => console.error('Ocorreu o seguinte erro:', error));
     });
 
 }else{
@@ -59,7 +59,7 @@ if (!idPlano){
                     }
                 }
             }     
-    });
+    }).catch(error => console.error('Ocorreu o seguinte erro:', error));
 
     form.addEventListener('submit', function(e){
         e.preventDefault();
@@ -93,7 +93,7 @@ if (!idPlano){
         }).then(({ message }) => {
             alert(message);
             window.location.href = ("planosListagem.html");
-        });
+        }).catch(error => console.error('Ocorreu o seguinte erro:', error));
     });
 
 

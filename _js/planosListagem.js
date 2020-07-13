@@ -9,17 +9,17 @@ fetch(url).then(response => {
     const html = jsonBody.map(plano =>{
         return `
             <tr onclick="obterID(this)">
-                <td>${plano.id}</td>
-                <td>${plano.nome}</td>
-                <td>${plano.horas}</td>
-                <td>${plano.preco}</td>
-                <td>${plano.ativo}</td>
-                <td><a onClick="editar(this)">Editar</a> <a onClick="excluir(this)">Excluir</a></td>
+                <td><span>ID:</span>${plano.id}</td>
+                <td><span>Nome:</span>${plano.nome}</td>
+                <td><span>Horas:</span>${plano.horas}</td>
+                <td><span>Preço:</span>${plano.preco}</td>
+                <td><span>Ativo:</span>${plano.ativo}</td>
+                <td><span>Opções:</span><a onClick="editar(this)">Editar</a> <a onClick="excluir(this)">Excluir</a></td>
             </tr>
         `
     }).join("");
     gridPlanos.insertAdjacentHTML("afterbegin", html);
-});
+}).catch(error => console.error('Ocorreu o seguinte erro:', error));
 
 function adicionar(){
     location.href="planosCadastro.html"
@@ -66,7 +66,7 @@ function excluir(){
             }).then(({ message }) => {
                 alert(message);
                 window.location.reload();
-            });
+            }).catch(error => console.error('Ocorreu o seguinte erro:', error));
         }else{
             window.location.reload();
         }

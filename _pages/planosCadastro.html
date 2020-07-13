@@ -1,59 +1,59 @@
 <html>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title> Meu B2B </title>
-        <link href="../_images/favicon.png" rel="icon">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="../_css/stylemain.css">
-    </head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Meu B2B </title>
+    <link href="../_images/favicon.png" rel="icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../_css/stylemain.css">
+  </head>
 
-    <body>
+  <body>
 
-            <header>
-                <img src="../_images/logo.png" onclick="menu()">
-            </header>
-    
-            <aside>                
-                <nav>
-                    <ul>
-                      <li>
-                        <a href="clientesListagem.html">
-                          <span>Clientes</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="vendedoresListagem.html">
-                          <span>Vendedores</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="planosListagem.html">
-                          <span>Planos</span>
-                        </a>
-                      </li>
-                    </ul>    
-                </nav>
-            </aside>
+    <header>
+      <img src="../_images/logo.png" onclick="menu()">
+    </header>
 
-            <main id="conteudo" class="exibeconteudo">
-              <form name="formmain" id="form">
-                <p>Nome</p>
-                <input type="text" name="nome" id="nome" placeholder="Insira o nome do plano">
-                <p>Horas</p>
-                <input type="number" name="horas" id="horas" placeholder="Insira a qtde de horas">
-                <p>Preço</p>
-                <input type="number" name="preco" id="preco" placeholder="Insira o preço">
-                <p>Ativo</p>
-                <input type="checkbox" name="ativo" id="ativo" checked><br><br><br>
-                <input type="submit" value="Gravar" onclick="return validarPlano()">
-              </form>
-            </main>
-        
-            <script type="text/javascript" src="../_js/main.js"></script>
-            <script type="text/javascript" src="../_js/planosCadastro.js"></script>
-    
-    </body>
+    <aside>                
+      <nav>
+        <ul>
+          <li>
+            <a href="clientesListagem.html">
+              <span>Clientes</span>
+            </a>
+          </li>
+          <li>
+            <a href="vendedoresListagem.html">
+              <span>Vendedores</span>
+            </a>
+          </li>
+          <li>
+            <a href="planosListagem.html">
+              <span>Planos</span>
+            </a>
+          </li>
+        </ul>    
+      </nav>
+    </aside>
+
+    <main id="conteudo" class="exibeconteudo">
+      <form name="formmain" id="form">
+        <p>Nome</p>
+        <input type="text" name="nome" id="nome" placeholder="Insira o nome do plano">
+        <p>Horas</p>
+        <input type="number" name="horas" id="horas" placeholder="Insira a qtde de horas">
+        <p>Preço</p>
+        <input type="number" name="preco" id="preco" placeholder="Insira o preço">
+        <p>Ativo</p>
+        <input type="checkbox" name="ativo" id="ativo" checked><br><br><br>
+        <input type="submit" value="Gravar" onclick="return validarPlano()">
+      </form>
+    </main>
+
+    <script type="text/javascript" src="../_js/main.js"></script>
+    <script type="text/javascript" src="../_js/planosCadastro.js"></script>
+  
+  </body>
 
 </html>
