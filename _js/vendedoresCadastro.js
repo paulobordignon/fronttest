@@ -1,7 +1,7 @@
 const urlVendedores = 'https://my-proposta.azurewebsites.net/v1/vendedores';
 const form = document.getElementById('form');
-var url = location.hash.split("#");
-var idVendedor = url[1];
+var url = location.hash.split("E");
+var idVendedor = url[2];
 
 if (!idVendedor){
 

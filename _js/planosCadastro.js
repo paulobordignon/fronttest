@@ -1,7 +1,7 @@
 const urlPlanos = 'https://my-proposta.azurewebsites.net/v1/planos';
 const form = document.getElementById('form');
-var url = location.hash.split("#");
-var idPlano = url[1];
+var url = location.hash.split("E");
+var idPlano = url[2];
 
 if (!idPlano){
 

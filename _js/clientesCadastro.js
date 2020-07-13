@@ -1,7 +1,7 @@
 const urlclientes = 'https://my-proposta.azurewebsites.net/v1/clientes';
 const form = document.getElementById('form');
-var url = location.hash.split("#");
-var idCliente = url[1];
+var url = location.hash.split("E");
+var idCliente = url[2];
 
 if (!idCliente){
 

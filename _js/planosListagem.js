@@ -49,7 +49,9 @@ function excluir(){
         var retorno = confirm("Deseja realmente Excluir esse registro?");
         if (retorno == true){
 
-            var idSelecionado = Number(linhaSelecionada);
+            var separaID = linhaSelecionada.split(">");
+            var idExclusao = separaID[2];
+            var idSelecionado = Number(idExclusao);
 
             const dadosExclusao = {
                 id: idSelecionado
